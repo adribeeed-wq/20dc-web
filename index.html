@@ -1,316 +1,402 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>20DC | Cañas · Copas · Conciertos</title>
-
-<link rel="stylesheet" href="styles.css">
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Arial;
-}
-
-body{
-background:#FF8000;
-color:white;
-}
-
-/* VIDEO HERO */
-
-.hero{
-position:relative;
-height:100vh;
-overflow:hidden;
-}
-
-.hero video{
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-object-fit:cover;
-}
-
-.hero-overlay{
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:rgba(0,0,0,0.5);
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-}
-
-.hero h1{
-font-size:60px;
-letter-spacing:4px;
-}
-
-.hero p{
-margin-top:10px;
-font-size:20px;
-}
-
-/* MENU */
-
-nav{
-position:absolute;
-top:0;
-width:100%;
-display:flex;
-justify-content:center;
-gap:30px;
-padding:20px;
-z-index:10;
-}
-
-nav a{
-color:white;
-text-decoration:none;
-font-weight:bold;
-}
-
-/* SECTIONS */
-
-section{
-padding:80px 20px;
-text-align:center;
-}
-
-.section-box{
-background:#2F4015;
-padding:40px;
-border-radius:10px;
-max-width:1000px;
-margin:auto;
-}
-
-h2{
-margin-bottom:30px;
-font-size:32px;
-}
-
-/* GRID */
-
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:20px;
-}
-
-.card{
-background:#3e5521;
-padding:20px;
-border-radius:10px;
-}
-
-/* EVENTOS VIDEO */
-
-.event-video video{
-width:100%;
-border-radius:10px;
-}
-
-/* BOTONES */
-
-.buttons{
-margin-top:30px;
-}
-
-.btn{
-display:inline-block;
-padding:15px 30px;
-margin:10px;
-border-radius:8px;
-text-decoration:none;
-font-weight:bold;
-}
-
-.instagram{
-background:#E1306C;
-}
-
-.whatsapp{
-background:#25D366;
-}
-
-footer{
-padding:30px;
-text-align:center;
-}
-
-</style>
-
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>20DC | Cañas · Copas · Conciertos</title>
+  <meta name="description" content="20DC — Cañas, Copas y Conciertos. Carta, eventos, galería y tienda." />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
+  <!-- HEADER -->
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <a class="brand" href="#top" aria-label="Ir al inicio">
+        <span class="brand__mark">20DC</span>
+        <span class="brand__tag">Cañas · Copas · Conciertos</span>
+      </a>
 
-<!-- HERO VIDEO -->
+      <button class="navToggle" id="navToggle" aria-expanded="false" aria-controls="navMenu">
+        ☰
+      </button>
 
-<div class="hero">
+      <nav class="nav" id="navMenu">
+        <a href="#carta">Carta</a>
+        <a href="#eventos">Eventos</a>
+        <a href="#imagenes">Imágenes</a>
+        <a href="#tienda">Tienda</a>
+        <a class="nav__cta" href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
 
-<nav>
+  <!-- HERO CON VIDEO DE FONDO -->
+  <section class="hero" aria-label="Portada">
+    <video class="hero__video" autoplay muted loop playsinline preload="metadata">
+      <source src="evento1.mp4" type="video/mp4" />
+    </video>
 
-<a href="#carta">Carta</a>
-<a href="#eventos">Eventos</a>
-<a href="#imagenes">Imágenes</a>
-<a href="#tienda">Tienda</a>
+    <div class="hero__overlay"></div>
 
-</nav>
+    <div class="container hero__content">
+      <div class="hero__card reveal">
+        <h1>20DC</h1>
+        <p class="lead">Ambiente, música y buen rollo. Mira la carta, próximos eventos, galería y tienda.</p>
 
-<video autoplay muted loop playsinline>
+        <div class="hero__actions">
+          <a class="btn" href="#eventos">Ver eventos</a>
+          <a class="btn btn--ghost" href="#carta">Ver carta</a>
+        </div>
 
-<source src="evento1.mp4" type="video/mp4">
+        <div class="hero__badges">
+          <span class="badge">Cañas</span>
+          <span class="badge">Copas</span>
+          <span class="badge">Conciertos</span>
+        </div>
+      </div>
 
-</video>
+      <div class="hero__side">
+        <div class="sideCard reveal">
+          <h3>Contacto rápido</h3>
+          <p class="muted">Reserva o consulta desde aquí.</p>
 
-<div class="hero-overlay">
+          <div class="sideActions">
+            <a class="btn btn--whatsapp" target="_blank" rel="noreferrer"
+               href="https://wa.me/34722776903?text=buenas%20quiero%20hacer%20un%20reservado%20para%20este%20finde%20semana">
+              WhatsApp
+            </a>
 
-<h1>20DC</h1>
-<p>Cañas · Copas · Conciertos</p>
+            <a class="btn btn--instagram" target="_blank" rel="noreferrer"
+               href="https://instagram.com/20dcanascopasconciertos">
+              Instagram
+            </a>
+          </div>
+        </div>
 
-<div class="buttons">
+        <div class="sideCard sideCard--note reveal">
+          <p class="small muted">
+            Tip: Si en iPhone no auto-reproduce, ya está configurado con <b>muted</b> + <b>playsinline</b>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<a class="btn instagram"
-href="https://instagram.com/20dcanascopasconciertos"
-target="_blank">
+  <main>
+    <!-- CARTA -->
+    <section class="section" id="carta">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2>Carta</h2>
+          <p class="muted">Subapartados + buscador. Edita nombres y precios cuando quieras.</p>
+        </div>
 
-Instagram
+        <div class="toolbar reveal">
+          <div class="tabs" role="tablist" aria-label="Subapartados de carta">
+            <button class="tab is-active" data-tab="tab-canas" aria-selected="true">Cañas</button>
+            <button class="tab" data-tab="tab-copas" aria-selected="false">Copas</button>
+            <button class="tab" data-tab="tab-cocktails" aria-selected="false">Cócteles</button>
+            <button class="tab" data-tab="tab-vinos" aria-selected="false">Vinos</button>
+            <button class="tab" data-tab="tab-refrescos" aria-selected="false">Refrescos</button>
+            <button class="tab" data-tab="tab-shots" aria-selected="false">Shots</button>
+          </div>
 
-</a>
+          <div class="search">
+            <input id="menuSearch" type="search" placeholder="Buscar en la carta (ej: mojito, gin, doble…)" />
+          </div>
+        </div>
 
-<a class="btn whatsapp"
-href="https://wa.me/34722776903?text=Buenas%20quiero%20hacer%20un%20reservado%20para%20este%20fin%20de%20semana">
+        <div class="tabpanes reveal">
+          <div class="tabpane is-active" id="tab-canas" role="tabpanel">
+            <div class="grid grid--2">
+              <article class="card">
+                <h3>Grifo</h3>
+                <ul class="menu">
+                  <li><span>Caña</span><span>2,00€</span></li>
+                  <li><span>Doble</span><span>2,80€</span></li>
+                  <li><span>Pinta</span><span>4,50€</span></li>
+                </ul>
+              </article>
+              <article class="card">
+                <h3>Botellín</h3>
+                <ul class="menu">
+                  <li><span>Botellín</span><span>2,50€</span></li>
+                  <li><span>Sin alcohol</span><span>2,50€</span></li>
+                  <li><span>Tostada</span><span>2,80€</span></li>
+                </ul>
+              </article>
+            </div>
+          </div>
 
-WhatsApp
+          <div class="tabpane" id="tab-copas" role="tabpanel">
+            <div class="grid grid--2">
+              <article class="card">
+                <h3>Clásicas</h3>
+                <ul class="menu">
+                  <li><span>Ron + refresco</span><span>6,00€</span></li>
+                  <li><span>Vodka + refresco</span><span>6,00€</span></li>
+                  <li><span>Ginebra + tónica</span><span>6,50€</span></li>
+                </ul>
+              </article>
+              <article class="card">
+                <h3>Premium</h3>
+                <ul class="menu">
+                  <li><span>Premium (copa)</span><span>8,00€</span></li>
+                  <li><span>Tónica premium</span><span>+1,00€</span></li>
+                  <li><span>Red Bull</span><span>+1,50€</span></li>
+                </ul>
+              </article>
+            </div>
+          </div>
 
-</a>
+          <div class="tabpane" id="tab-cocktails" role="tabpanel">
+            <div class="grid grid--2">
+              <article class="card">
+                <h3>Clásicos</h3>
+                <ul class="menu">
+                  <li><span>Mojito</span><span>7,50€</span></li>
+                  <li><span>Daiquiri</span><span>7,50€</span></li>
+                  <li><span>Piña Colada</span><span>8,00€</span></li>
+                </ul>
+              </article>
+              <article class="card">
+                <h3>Especiales</h3>
+                <ul class="menu">
+                  <li><span>20DC Special</span><span>8,50€</span></li>
+                  <li><span>Spritz</span><span>7,50€</span></li>
+                  <li><span>Sin alcohol</span><span>6,50€</span></li>
+                </ul>
+              </article>
+            </div>
+          </div>
 
-</div>
+          <div class="tabpane" id="tab-vinos" role="tabpanel">
+            <div class="grid grid--2">
+              <article class="card">
+                <h3>Por copa</h3>
+                <ul class="menu">
+                  <li><span>Tinto</span><span>3,00€</span></li>
+                  <li><span>Blanco</span><span>3,00€</span></li>
+                  <li><span>Rosado</span><span>3,00€</span></li>
+                </ul>
+              </article>
+              <article class="card">
+                <h3>Botella</h3>
+                <ul class="menu">
+                  <li><span>Casa</span><span>12,00€</span></li>
+                  <li><span>Crianza</span><span>16,00€</span></li>
+                  <li><span>Reserva</span><span>18,00€</span></li>
+                </ul>
+              </article>
+            </div>
+          </div>
 
-</div>
+          <div class="tabpane" id="tab-refrescos" role="tabpanel">
+            <div class="grid grid--2">
+              <article class="card">
+                <h3>Refrescos</h3>
+                <ul class="menu">
+                  <li><span>Coca-Cola / Zero</span><span>2,20€</span></li>
+                  <li><span>Fanta / Sprite</span><span>2,20€</span></li>
+                  <li><span>Tónica</span><span>2,20€</span></li>
+                </ul>
+              </article>
+              <article class="card">
+                <h3>Agua / Zumos</h3>
+                <ul class="menu">
+                  <li><span>Agua</span><span>1,50€</span></li>
+                  <li><span>Agua con gas</span><span>2,00€</span></li>
+                  <li><span>Zumo</span><span>2,50€</span></li>
+                </ul>
+              </article>
+            </div>
+          </div>
 
-</div>
+          <div class="tabpane" id="tab-shots" role="tabpanel">
+            <div class="grid grid--2">
+              <article class="card">
+                <h3>Shots</h3>
+                <ul class="menu">
+                  <li><span>Tequila</span><span>2,50€</span></li>
+                  <li><span>Jäger</span><span>3,00€</span></li>
+                  <li><span>Chupito especial</span><span>3,50€</span></li>
+                </ul>
+              </article>
+              <article class="card">
+                <h3>Promos</h3>
+                <ul class="menu">
+                  <li><span>3 shots</span><span>7,00€</span></li>
+                  <li><span>5 shots</span><span>11,00€</span></li>
+                </ul>
+              </article>
+            </div>
+          </div>
+        </div>
 
-<!-- CARTA -->
+        <p class="muted small reveal" id="searchHint"></p>
+      </div>
+    </section>
 
-<section id="carta">
+    <!-- EVENTOS -->
+    <section class="section section--alt" id="eventos">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2>Eventos</h2>
+          <p class="muted">Aquí van carteles o vídeos. Por ahora quedan tarjetas pro.</p>
+        </div>
 
-<div class="section-box">
+        <div class="eventsGrid reveal">
+          <button class="eventCard openModal" data-title="Concierto en directo" data-sub="Viernes · 22:30">
+            <div class="eventMedia placeholder"></div>
+            <div class="eventText">
+              <strong>Concierto en directo</strong>
+              <span class="muted">Viernes · 22:30</span>
+            </div>
+          </button>
 
-<h2>Carta</h2>
+          <button class="eventCard openModal" data-title="Noche DJ" data-sub="Sábado · 23:00">
+            <div class="eventMedia placeholder"></div>
+            <div class="eventText">
+              <strong>Noche DJ</strong>
+              <span class="muted">Sábado · 23:00</span>
+            </div>
+          </button>
 
-<div class="grid">
+          <button class="eventCard openModal" data-title="Sesión especial" data-sub="Próximamente">
+            <div class="eventMedia placeholder"></div>
+            <div class="eventText">
+              <strong>Sesión especial</strong>
+              <span class="muted">Próximamente</span>
+            </div>
+          </button>
 
-<div class="card">
-<h3>Cervezas</h3>
-<p>Caña</p>
-<p>Doble</p>
-<p>Estrella Galicia</p>
-</div>
+          <button class="eventCard openModal" data-title="Fiesta temática" data-sub="Próximamente">
+            <div class="eventMedia placeholder"></div>
+            <div class="eventText">
+              <strong>Fiesta temática</strong>
+              <span class="muted">Próximamente</span>
+            </div>
+          </button>
+        </div>
+      </div>
+    </section>
 
-<div class="card">
-<h3>Copas</h3>
-<p>Ron</p>
-<p>Ginebra</p>
-<p>Whisky</p>
-</div>
+    <!-- IMÁGENES -->
+    <section class="section" id="imagenes">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2>Imágenes</h2>
+          <p class="muted">Galería (por ahora placeholders). Click para ampliar.</p>
+        </div>
 
-<div class="card">
-<h3>Refrescos</h3>
-<p>Coca Cola</p>
-<p>Fanta</p>
-<p>Aquarius</p>
-</div>
+        <div class="galleryGrid reveal">
+          <button class="galleryItem openModal" data-title="Galería" data-sub="Imagen 1"><div class="galleryMedia placeholder"></div></button>
+          <button class="galleryItem openModal" data-title="Galería" data-sub="Imagen 2"><div class="galleryMedia placeholder"></div></button>
+          <button class="galleryItem openModal" data-title="Galería" data-sub="Imagen 3"><div class="galleryMedia placeholder"></div></button>
+          <button class="galleryItem openModal" data-title="Galería" data-sub="Imagen 4"><div class="galleryMedia placeholder"></div></button>
+          <button class="galleryItem openModal" data-title="Galería" data-sub="Imagen 5"><div class="galleryMedia placeholder"></div></button>
+          <button class="galleryItem openModal" data-title="Galería" data-sub="Imagen 6"><div class="galleryMedia placeholder"></div></button>
+        </div>
+      </div>
+    </section>
 
-<div class="card">
-<h3>Chupitos</h3>
-<p>Jäger</p>
-<p>Tequila</p>
-</div>
+    <!-- TIENDA -->
+    <section class="section section--alt" id="tienda">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2>Tienda</h2>
+          <p class="muted">Merch / entradas / promos. De momento “Próximamente”.</p>
+        </div>
 
-</div>
+        <div class="shopGrid reveal">
+          <article class="shopCard">
+            <div class="shopMedia placeholder"></div>
+            <div class="shopBody">
+              <h3>Camiseta 20DC</h3>
+              <p class="muted small">Merch oficial · Próximamente</p>
+              <button class="btn btn--ghost" disabled>Próximamente</button>
+            </div>
+          </article>
 
-</div>
+          <article class="shopCard">
+            <div class="shopMedia placeholder"></div>
+            <div class="shopBody">
+              <h3>Entrada concierto</h3>
+              <p class="muted small">Consulta por WhatsApp</p>
+              <a class="btn" target="_blank" rel="noreferrer"
+                 href="https://wa.me/34722776903?text=buenas%20quiero%20hacer%20un%20reservado%20para%20este%20finde%20semana">
+                Consultar
+              </a>
+            </div>
+          </article>
 
-</section>
+          <article class="shopCard">
+            <div class="shopMedia placeholder"></div>
+            <div class="shopBody">
+              <h3>Promo cumple</h3>
+              <p class="muted small">Info por Instagram</p>
+              <a class="btn btn--ghost" target="_blank" rel="noreferrer"
+                 href="https://instagram.com/20dcanascopasconciertos">
+                Ver promos
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
 
-<!-- EVENTOS -->
+    <!-- CONTACTO (DOS BOTONES) -->
+    <section class="section" id="contacto">
+      <div class="container">
+        <div class="section__head reveal">
+          <h2>Contacto</h2>
+          <p class="muted">Sin emergentes: dos apartados con botones.</p>
+        </div>
 
-<section id="eventos">
+        <div class="contactGrid reveal">
+          <article class="card contactCard">
+            <h3>Instagram</h3>
+            <p class="muted">Fotos, eventos y novedades.</p>
+            <a class="btn btn--instagram" target="_blank" rel="noreferrer"
+               href="https://instagram.com/20dcanascopasconciertos">
+              Abrir Instagram
+            </a>
+          </article>
 
-<div class="section-box">
+          <article class="card contactCard">
+            <h3>WhatsApp</h3>
+            <p class="muted">Reserva con mensaje automático.</p>
+            <a class="btn btn--whatsapp" target="_blank" rel="noreferrer"
+               href="https://wa.me/34722776903?text=buenas%20quiero%20hacer%20un%20reservado%20para%20este%20finde%20semana">
+              Abrir WhatsApp
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
 
-<h2>Eventos</h2>
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© <span id="year"></span> 20DC · Cañas · Copas · Conciertos</p>
+      <a href="#top" class="footerLink">Volver arriba ↑</a>
+    </div>
+  </footer>
 
-<div class="event-video">
+  <!-- MODAL -->
+  <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-label="Detalle">
+    <div class="modal__backdrop" data-close="1"></div>
+    <div class="modal__content" role="document">
+      <button class="modal__close" data-close="1" aria-label="Cerrar">✕</button>
+      <div class="modal__media placeholder" id="modalMedia"></div>
+      <div class="modal__caption">
+        <strong id="modalTitle">Título</strong>
+        <span class="muted" id="modalSub">Subtítulo</span>
+      </div>
+    </div>
+  </div>
 
-<video controls>
-
-<source src="evento1.mp4" type="video/mp4">
-
-</video>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- IMAGENES -->
-
-<section id="imagenes">
-
-<div class="section-box">
-
-<h2>Imágenes</h2>
-
-<div class="grid">
-
-<img src="https://via.placeholder.com/300">
-<img src="https://via.placeholder.com/300">
-<img src="https://via.placeholder.com/300">
-<img src="https://via.placeholder.com/300">
-
-</div>
-
-</div>
-
-</section>
-
-<!-- TIENDA -->
-
-<section id="tienda">
-
-<div class="section-box">
-
-<h2>Tienda</h2>
-
-<p>Próximamente merchandising oficial de 20DC.</p>
-
-</div>
-
-</section>
-
-<footer>
-
-<p>20DC © Cañas · Copas · Conciertos</p>
-
-</footer>
-
+  <script src="script.js"></script>
 </body>
 </html>
