@@ -1,392 +1,64 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>20DC | Cañas · Copas · Conciertos</title>
-  <link rel="stylesheet" href="styles.css" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>20DC | Cañas · Copas · Conciertos</title>
+<link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-  <!-- Header -->
-  <header class="header" id="top">
-    <div class="container header__inner">
-      <a class="brand" href="#top" aria-label="Ir al inicio">
-        <span class="brand__mark">20DC</span>
-        <span class="brand__tag">Cañas · Copas · Conciertos</span>
+
+<header class="header">
+  <div class="container">
+    <h1>20DC</h1>
+    <p>Cañas · Copas · Conciertos</p>
+
+    <div class="social-buttons">
+
+      <!-- INSTAGRAM -->
+      <!-- SOLO CAMBIA EL USUARIO SI QUIERES OTRO -->
+      <a class="btn instagram"
+         href="https://instagram.com/20dcanascopasconciertos"
+         target="_blank">
+         Instagram
       </a>
 
-      <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu">☰</button>
+      <!-- WHATSAPP -->
+      <!-- SOLO CAMBIA EL NÚMERO (formato: 34XXXXXXXXX sin + ni espacios) -->
+      <a class="btn whatsapp"
+         href="https://wa.me/34722776903?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%2020DC."
+         target="_blank">
+         WhatsApp
+      </a>
 
-      <nav class="nav" id="navMenu">
-        <a href="#carta">Carta</a>
-        <a href="#eventos">Eventos</a>
-        <a href="#info">Información</a>
-        <a href="#logos">Logos</a>
-        <a class="nav__cta" href="#contacto">Contacto</a>
-      </nav>
-    </div>
-  </header>
-
-  <main>
-    <!-- Hero -->
-    <section class="hero">
-      <div class="container hero__inner">
-        <div class="hero__copy">
-          <h1>20DC</h1>
-          <p class="lead">Cañas, copas y conciertos. Carta de bebidas + eventos del local.</p>
-
-          <div class="hero__actions">
-            <a class="btn" href="#carta">Ver carta</a>
-            <a class="btn btn--ghost" href="#eventos">Ver eventos</a>
-          </div>
-
-          <div class="hero__social">
-            <!-- CAMBIA TU USUARIO DE INSTAGRAM -->
-            <a class="chip" href="https://instagram.com/TU_USUARIO" target="_blank" rel="noreferrer" aria-label="Instagram 20DC">
-              Instagram
-            </a>
-
-            <!-- CAMBIA EL NÚMERO (formato internacional sin + ni espacios). Ej: 34600111222 -->
-            <a class="chip chip--accent" href="https://wa.me/34600000000" target="_blank" rel="noreferrer" aria-label="WhatsApp 20DC">
-              WhatsApp
-            </a>
-          </div>
-        </div>
-
-        <!-- Logo principal -->
-        <div class="hero__card">
-          <img src="assets/logos/logo-1.jpg" alt="Logo 20DC" />
-          <p class="muted small">Cambia este logo por tu versión favorita en <code>assets/logos/</code>.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- CARTA -->
-    <section class="section" id="carta">
-      <div class="container">
-        <div class="section__head">
-          <h2>Carta (Bebidas)</h2>
-          <p class="muted">Subapartados + buscador. Edita productos y precios cuando quieras.</p>
-        </div>
-
-        <div class="toolbar">
-          <div class="tabs" role="tablist" aria-label="Subapartados de carta">
-            <button class="tab is-active" role="tab" data-tab="tab-canas" aria-selected="true">Cañas</button>
-            <button class="tab" role="tab" data-tab="tab-copas" aria-selected="false">Copas</button>
-            <button class="tab" role="tab" data-tab="tab-vinos" aria-selected="false">Vinos</button>
-            <button class="tab" role="tab" data-tab="tab-cocktails" aria-selected="false">Cócteles</button>
-            <button class="tab" role="tab" data-tab="tab-refrescos" aria-selected="false">Refrescos</button>
-            <button class="tab" role="tab" data-tab="tab-shot" aria-selected="false">Shots</button>
-          </div>
-
-          <div class="search">
-            <input id="menuSearch" type="search" placeholder="Buscar en la carta (ej: gin, mojito, doble…)" />
-          </div>
-        </div>
-
-        <div class="tabpanes">
-          <!-- CAÑAS -->
-          <div class="tabpane is-active" id="tab-canas" role="tabpanel">
-            <div class="grid grid--2">
-              <article class="card">
-                <h3>Grifo</h3>
-                <ul class="menu">
-                  <li><span>Caña</span><span>2,00€</span></li>
-                  <li><span>Doble</span><span>2,80€</span></li>
-                  <li><span>Pinta</span><span>4,50€</span></li>
-                </ul>
-              </article>
-
-              <article class="card">
-                <h3>Botellín</h3>
-                <ul class="menu">
-                  <li><span>Botellín</span><span>2,50€</span></li>
-                  <li><span>Sin alcohol</span><span>2,50€</span></li>
-                  <li><span>Tostada</span><span>2,80€</span></li>
-                </ul>
-              </article>
-            </div>
-          </div>
-
-          <!-- COPAS -->
-          <div class="tabpane" id="tab-copas" role="tabpanel">
-            <div class="grid grid--2">
-              <article class="card">
-                <h3>Estándar</h3>
-                <ul class="menu">
-                  <li><span>Ron + refresco</span><span>6,00€</span></li>
-                  <li><span>Vodka + refresco</span><span>6,00€</span></li>
-                  <li><span>Ginebra + tónica</span><span>6,50€</span></li>
-                </ul>
-              </article>
-
-              <article class="card">
-                <h3>Premium</h3>
-                <ul class="menu">
-                  <li><span>Premium (copa)</span><span>8,00€</span></li>
-                  <li><span>Premium + tónica premium</span><span>9,00€</span></li>
-                  <li><span>Red Bull (suplemento)</span><span>+1,50€</span></li>
-                </ul>
-              </article>
-            </div>
-          </div>
-
-          <!-- VINOS -->
-          <div class="tabpane" id="tab-vinos" role="tabpanel">
-            <div class="grid grid--2">
-              <article class="card">
-                <h3>Por copa</h3>
-                <ul class="menu">
-                  <li><span>Tinto</span><span>3,00€</span></li>
-                  <li><span>Blanco</span><span>3,00€</span></li>
-                  <li><span>Rosado</span><span>3,00€</span></li>
-                </ul>
-              </article>
-
-              <article class="card">
-                <h3>Botella</h3>
-                <ul class="menu">
-                  <li><span>Botella (casa)</span><span>12,00€</span></li>
-                  <li><span>Crianza</span><span>16,00€</span></li>
-                  <li><span>Reserva</span><span>18,00€</span></li>
-                </ul>
-              </article>
-            </div>
-          </div>
-
-          <!-- CÓCTELES -->
-          <div class="tabpane" id="tab-cocktails" role="tabpanel">
-            <div class="grid grid--2">
-              <article class="card">
-                <h3>Clásicos</h3>
-                <ul class="menu">
-                  <li><span>Mojito</span><span>7,50€</span></li>
-                  <li><span>Daiquiri</span><span>7,50€</span></li>
-                  <li><span>Piña Colada</span><span>8,00€</span></li>
-                </ul>
-              </article>
-
-              <article class="card">
-                <h3>Especiales 20DC</h3>
-                <ul class="menu">
-                  <li><span>20DC Special</span><span>8,50€</span></li>
-                  <li><span>Spritz</span><span>7,50€</span></li>
-                  <li><span>Sin alcohol</span><span>6,50€</span></li>
-                </ul>
-              </article>
-            </div>
-          </div>
-
-          <!-- REFRESCOS -->
-          <div class="tabpane" id="tab-refrescos" role="tabpanel">
-            <div class="grid grid--2">
-              <article class="card">
-                <h3>Refrescos</h3>
-                <ul class="menu">
-                  <li><span>Coca-Cola / Zero</span><span>2,20€</span></li>
-                  <li><span>Fanta / Sprite</span><span>2,20€</span></li>
-                  <li><span>Tónica</span><span>2,20€</span></li>
-                </ul>
-              </article>
-
-              <article class="card">
-                <h3>Zumos / Agua</h3>
-                <ul class="menu">
-                  <li><span>Agua</span><span>1,50€</span></li>
-                  <li><span>Agua con gas</span><span>2,00€</span></li>
-                  <li><span>Zumo</span><span>2,50€</span></li>
-                </ul>
-              </article>
-            </div>
-          </div>
-
-          <!-- SHOTS -->
-          <div class="tabpane" id="tab-shot" role="tabpanel">
-            <div class="grid grid--2">
-              <article class="card">
-                <h3>Shots</h3>
-                <ul class="menu">
-                  <li><span>Tequila</span><span>2,50€</span></li>
-                  <li><span>Jäger</span><span>3,00€</span></li>
-                  <li><span>Chupito especial</span><span>3,50€</span></li>
-                </ul>
-              </article>
-
-              <article class="card">
-                <h3>Promos</h3>
-                <ul class="menu">
-                  <li><span>3 shots</span><span>7,00€</span></li>
-                  <li><span>5 shots</span><span>11,00€</span></li>
-                </ul>
-              </article>
-            </div>
-          </div>
-        </div>
-
-        <p class="muted small" id="searchHint"></p>
-      </div>
-    </section>
-
-    <!-- EVENTOS -->
-    <section class="section section--alt" id="eventos">
-      <div class="container">
-        <div class="section__head">
-          <h2>Eventos</h2>
-          <p class="muted">Sube tus carteles/fotos en <code>assets/eventos/</code> y se verán aquí.</p>
-        </div>
-
-        <div class="events-grid">
-          <!-- LISTO PARA PONER FOTOS (cambia nombres o añade más cards) -->
-          <button class="event-card" data-full="assets/eventos/evento-1.jpg" aria-label="Ver evento 1 en grande">
-            <img src="assets/eventos/evento-1.jpg" alt="Evento 1" />
-            <div class="event-meta">
-              <strong>Concierto en directo</strong>
-              <span class="muted">Viernes · 22:30</span>
-            </div>
-          </button>
-
-          <button class="event-card" data-full="assets/eventos/evento-2.jpg" aria-label="Ver evento 2 en grande">
-            <img src="assets/eventos/evento-2.jpg" alt="Evento 2" />
-            <div class="event-meta">
-              <strong>Noche DJ</strong>
-              <span class="muted">Sábado · 23:00</span>
-            </div>
-          </button>
-
-          <button class="event-card" data-full="assets/eventos/evento-3.jpg" aria-label="Ver evento 3 en grande">
-            <img src="assets/eventos/evento-3.jpg" alt="Evento 3" />
-            <div class="event-meta">
-              <strong>Sesión especial</strong>
-              <span class="muted">Próximamente</span>
-            </div>
-          </button>
-
-          <button class="event-card" data-full="assets/eventos/evento-4.jpg" aria-label="Ver evento 4 en grande">
-            <img src="assets/eventos/evento-4.jpg" alt="Evento 4" />
-            <div class="event-meta">
-              <strong>Fiesta temática</strong>
-              <span class="muted">Próximamente</span>
-            </div>
-          </button>
-        </div>
-
-        <div class="note">
-          <strong>Cómo añadir más eventos:</strong> duplica una <em>event-card</em> y cambia
-          <code>evento-5.jpg</code>, título y fecha.
-        </div>
-      </div>
-    </section>
-
-    <!-- INFORMACIÓN + CONTACTO -->
-    <section class="section" id="info">
-      <div class="container">
-        <div class="section__head">
-          <h2>Información</h2>
-          <p class="muted">Horario, ubicación y contacto directo.</p>
-        </div>
-
-        <div class="grid grid--2">
-          <article class="card">
-            <h3>Horario</h3>
-            <ul class="list">
-              <li><span>Lunes–Jueves</span><span>18:00 – 02:00</span></li>
-              <li><span>Viernes</span><span>18:00 – 03:30</span></li>
-              <li><span>Sábado</span><span>16:00 – 03:30</span></li>
-              <li><span>Domingo</span><span>16:00 – 02:00</span></li>
-            </ul>
-
-            <div class="cta-row">
-              <a class="btn btn--small" href="https://instagram.com/TU_USUARIO" target="_blank" rel="noreferrer">Instagram</a>
-              <a class="btn btn--small btn--ghost" href="https://wa.me/34600000000" target="_blank" rel="noreferrer">WhatsApp</a>
-            </div>
-          </article>
-
-          <article class="card">
-            <h3>Ubicación</h3>
-            <p><strong>Dirección:</strong> Calle Ejemplo 123, Ciudad</p>
-            <p class="muted small">Cambia la dirección y el link de Google Maps.</p>
-            <a class="btn btn--small" target="_blank" rel="noreferrer"
-               href="https://www.google.com/maps/search/?api=1&query=Calle%20Ejemplo%20123">
-              Abrir en Maps
-            </a>
-          </article>
-
-          <article class="card" id="contacto">
-            <h3>Contacto rápido</h3>
-            <p class="muted">Botones listos. Cambia usuario y número arriba.</p>
-
-            <div class="cta-col">
-              <a class="btn" href="https://instagram.com/TU_USUARIO" target="_blank" rel="noreferrer">Abrir Instagram</a>
-              <a class="btn btn--ghost" href="https://wa.me/34600000000" target="_blank" rel="noreferrer">Escribir por WhatsApp</a>
-            </div>
-
-            <p class="muted small">WhatsApp: usa formato <code>34</code> + número (sin +, sin espacios).</p>
-          </article>
-
-          <article class="card">
-            <h3>Reservas (opcional)</h3>
-            <form class="form" onsubmit="return false;">
-              <label>
-                Nombre
-                <input type="text" placeholder="Tu nombre" />
-              </label>
-              <label>
-                Mensaje
-                <textarea rows="4" placeholder="Reserva / consulta"></textarea>
-              </label>
-              <button class="btn" type="button" id="fakeSend">Enviar</button>
-              <p class="muted small" id="formMsg" aria-live="polite"></p>
-            </form>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- LOGOS -->
-    <section class="section" id="logos">
-      <div class="container">
-        <div class="section__head">
-          <h2>Logos</h2>
-          <p class="muted">Haz click para ver en grande.</p>
-        </div>
-
-        <div class="logo-grid">
-          <button class="logo-item" data-full="assets/logos/logo-1.jpg" aria-label="Ver logo 1">
-            <img src="assets/logos/logo-1.jpg" alt="Logo 20DC versión 1" />
-          </button>
-          <button class="logo-item" data-full="assets/logos/logo-2.jpg" aria-label="Ver logo 2">
-            <img src="assets/logos/logo-2.jpg" alt="Logo 20DC versión 2" />
-          </button>
-          <button class="logo-item" data-full="assets/logos/logo-3.jpg" aria-label="Ver logo 3">
-            <img src="assets/logos/logo-3.jpg" alt="Logo 20DC versión 3" />
-          </button>
-          <button class="logo-item" data-full="assets/logos/logo-4.jpg" aria-label="Ver logo 4">
-            <img src="assets/logos/logo-4.jpg" alt="Logo 20DC versión 4" />
-          </button>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container footer__inner">
-      <p>© <span id="year"></span> 20DC · Cañas · Copas · Conciertos</p>
-      <a href="#top">Volver arriba ↑</a>
-    </div>
-  </footer>
-
-  <!-- Modal (para logos y eventos) -->
-  <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-label="Vista ampliada">
-    <div class="modal__backdrop" data-close="1"></div>
-    <div class="modal__content" role="document">
-      <button class="modal__close" data-close="1" aria-label="Cerrar">✕</button>
-      <img id="modalImg" src="" alt="Imagen ampliada" />
-      <div class="modal__caption" id="modalCaption"></div>
     </div>
   </div>
+</header>
 
-  <script src="script.js"></script>
+<section class="hero">
+  <h2>Bienvenido a 20DC</h2>
+  <p>Tu punto de encuentro para disfrutar.</p>
+</section>
+
+<section class="contact">
+  <h3>Contacto Directo</h3>
+
+  <a class="btn instagram"
+     href="https://instagram.com/20dcanascopasconciertos"
+     target="_blank">
+     Ver Instagram
+  </a>
+
+  <a class="btn whatsapp"
+     href="https://wa.me/34722776903?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%2020DC."
+     target="_blank">
+     Escribir por WhatsApp
+  </a>
+
+</section>
+
+<script src="script.js"></script>
+
 </body>
 </html>
