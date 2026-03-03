@@ -6,107 +6,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>20DC - Cañas Copas Conciertos</title>
+<title>20DC | Cañas · Copas · Conciertos</title>
 
-<style>
-
-body{
-margin:0;
-font-family:Arial;
-background:#FF8000;
-color:white;
-}
-
-header{
-background:#2F4015;
-padding:20px;
-text-align:center;
-}
-
-header h1{
-margin:0;
-font-size:40px;
-}
-
-nav{
-display:flex;
-justify-content:center;
-gap:20px;
-background:#2F4015;
-padding:10px;
-}
-
-nav a{
-color:white;
-text-decoration:none;
-font-weight:bold;
-}
-
-section{
-padding:40px;
-margin:20px;
-background:#2F4015;
-border-radius:10px;
-}
-
-h2{
-text-align:center;
-margin-bottom:20px;
-}
-
-.eventos video{
-width:100%;
-max-width:600px;
-display:block;
-margin:auto;
-border-radius:10px;
-}
-
-.logos{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:20px;
-}
-
-.logos img{
-width:120px;
-}
-
-.menu{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:20px;
-}
-
-.bebida{
-background:#3e5521;
-padding:15px;
-border-radius:10px;
-}
-
-.botones{
-text-align:center;
-margin-top:30px;
-}
-
-.boton{
-display:inline-block;
-margin:10px;
-padding:15px 25px;
-background:#FF8000;
-color:white;
-font-weight:bold;
-border-radius:8px;
-text-decoration:none;
-}
-
-footer{
-text-align:center;
-padding:20px;
-}
-
-</style>
+<link rel="stylesheet" href="styles.css">
 
 </head>
 
@@ -117,8 +19,6 @@ padding:20px;
 <h1>20DC</h1>
 <p>Cañas · Copas · Conciertos</p>
 
-</header>
-
 <nav>
 
 <a href="#eventos">Eventos</a>
@@ -127,6 +27,8 @@ padding:20px;
 
 </nav>
 
+</header>
+
 <section id="eventos">
 
 <h2>Eventos</h2>
@@ -134,7 +36,11 @@ padding:20px;
 <div class="eventos">
 
 <video autoplay muted loop controls>
+
 <source src="evento1.mp4" type="video/mp4">
+
+Tu navegador no soporta video.
+
 </video>
 
 </div>
@@ -147,31 +53,54 @@ padding:20px;
 
 <div class="menu">
 
-<div class="bebida">
+<div class="categoria">
+
 <h3>Cervezas</h3>
-<p>Mahou</p>
-<p>Estrella Galicia</p>
-<p>Heineken</p>
+
+<ul>
+<li>Caña</li>
+<li>Doble</li>
+<li>Estrella Galicia</li>
+<li>Mahou</li>
+</ul>
+
 </div>
 
-<div class="bebida">
+<div class="categoria">
+
 <h3>Copas</h3>
-<p>Ron</p>
-<p>Ginebra</p>
-<p>Whisky</p>
+
+<ul>
+<li>Ginebra</li>
+<li>Ron</li>
+<li>Whisky</li>
+<li>Vodka</li>
+</ul>
+
 </div>
 
-<div class="bebida">
+<div class="categoria">
+
 <h3>Refrescos</h3>
-<p>Coca Cola</p>
-<p>Fanta</p>
-<p>Aquarius</p>
+
+<ul>
+<li>Coca Cola</li>
+<li>Fanta</li>
+<li>Aquarius</li>
+</ul>
+
 </div>
 
-<div class="bebida">
+<div class="categoria">
+
 <h3>Chupitos</h3>
-<p>Jägermeister</p>
-<p>Tequila</p>
+
+<ul>
+<li>Jägermeister</li>
+<li>Tequila</li>
+<li>Fireball</li>
+</ul>
+
 </div>
 
 </div>
@@ -180,25 +109,23 @@ padding:20px;
 
 <section id="info">
 
-<h2>Información</h2>
-
-<div class="logos">
-
-<img src="logo1.png">
-<img src="logo2.png">
-<img src="logo3.png">
-<img src="logo4.png">
-
-</div>
+<h2>Contacto</h2>
 
 <div class="botones">
 
-<a class="boton" href="https://instagram.com/20dcanascopasconciertos" target="_blank">
+<a class="boton instagram"
+href="https://instagram.com/20dcanascopasconciertos"
+target="_blank">
+
 Instagram
+
 </a>
 
-<a class="boton" href="https://wa.me/34722776903?text=Buenas%20quiero%20hacer%20un%20reservado%20para%20este%20fin%20de%20semana">
+<a class="boton whatsapp"
+href="https://wa.me/34722776903?text=Buenas%20quiero%20hacer%20un%20reservado%20para%20este%20fin%20de%20semana">
+
 WhatsApp
+
 </a>
 
 </div>
@@ -211,5 +138,8 @@ WhatsApp
 
 </footer>
 
+<script src="script.js"></script>
+
 </body>
+
 </html>
