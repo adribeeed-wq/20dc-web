@@ -10,110 +10,182 @@
 
 <link rel="stylesheet" href="styles.css">
 
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+}
+
+body{
+background:#FF8000;
+color:white;
+}
+
+/* VIDEO HERO */
+
+.hero{
+position:relative;
+height:100vh;
+overflow:hidden;
+}
+
+.hero video{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+.hero-overlay{
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.5);
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+.hero h1{
+font-size:60px;
+letter-spacing:4px;
+}
+
+.hero p{
+margin-top:10px;
+font-size:20px;
+}
+
+/* MENU */
+
+nav{
+position:absolute;
+top:0;
+width:100%;
+display:flex;
+justify-content:center;
+gap:30px;
+padding:20px;
+z-index:10;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+/* SECTIONS */
+
+section{
+padding:80px 20px;
+text-align:center;
+}
+
+.section-box{
+background:#2F4015;
+padding:40px;
+border-radius:10px;
+max-width:1000px;
+margin:auto;
+}
+
+h2{
+margin-bottom:30px;
+font-size:32px;
+}
+
+/* GRID */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:20px;
+}
+
+.card{
+background:#3e5521;
+padding:20px;
+border-radius:10px;
+}
+
+/* EVENTOS VIDEO */
+
+.event-video video{
+width:100%;
+border-radius:10px;
+}
+
+/* BOTONES */
+
+.buttons{
+margin-top:30px;
+}
+
+.btn{
+display:inline-block;
+padding:15px 30px;
+margin:10px;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+}
+
+.instagram{
+background:#E1306C;
+}
+
+.whatsapp{
+background:#25D366;
+}
+
+footer{
+padding:30px;
+text-align:center;
+}
+
+</style>
+
 </head>
 
 <body>
 
-<header>
+<!-- HERO VIDEO -->
+
+<div class="hero">
+
+<nav>
+
+<a href="#carta">Carta</a>
+<a href="#eventos">Eventos</a>
+<a href="#imagenes">Imágenes</a>
+<a href="#tienda">Tienda</a>
+
+</nav>
+
+<video autoplay muted loop playsinline>
+
+<source src="evento1.mp4" type="video/mp4">
+
+</video>
+
+<div class="hero-overlay">
 
 <h1>20DC</h1>
 <p>Cañas · Copas · Conciertos</p>
 
-<nav>
+<div class="buttons">
 
-<a href="#eventos">Eventos</a>
-<a href="#carta">Carta</a>
-<a href="#info">Información</a>
-
-</nav>
-
-</header>
-
-<section id="eventos">
-
-<h2>Eventos</h2>
-
-<div class="eventos">
-
-<video autoplay muted loop controls>
-
-<source src="evento1.mp4" type="video/mp4">
-
-Tu navegador no soporta video.
-
-</video>
-
-</div>
-
-</section>
-
-<section id="carta">
-
-<h2>Carta de Bebidas</h2>
-
-<div class="menu">
-
-<div class="categoria">
-
-<h3>Cervezas</h3>
-
-<ul>
-<li>Caña</li>
-<li>Doble</li>
-<li>Estrella Galicia</li>
-<li>Mahou</li>
-</ul>
-
-</div>
-
-<div class="categoria">
-
-<h3>Copas</h3>
-
-<ul>
-<li>Ginebra</li>
-<li>Ron</li>
-<li>Whisky</li>
-<li>Vodka</li>
-</ul>
-
-</div>
-
-<div class="categoria">
-
-<h3>Refrescos</h3>
-
-<ul>
-<li>Coca Cola</li>
-<li>Fanta</li>
-<li>Aquarius</li>
-</ul>
-
-</div>
-
-<div class="categoria">
-
-<h3>Chupitos</h3>
-
-<ul>
-<li>Jägermeister</li>
-<li>Tequila</li>
-<li>Fireball</li>
-</ul>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="info">
-
-<h2>Contacto</h2>
-
-<div class="botones">
-
-<a class="boton instagram"
+<a class="btn instagram"
 href="https://instagram.com/20dcanascopasconciertos"
 target="_blank">
 
@@ -121,7 +193,7 @@ Instagram
 
 </a>
 
-<a class="boton whatsapp"
+<a class="btn whatsapp"
 href="https://wa.me/34722776903?text=Buenas%20quiero%20hacer%20un%20reservado%20para%20este%20fin%20de%20semana">
 
 WhatsApp
@@ -130,16 +202,115 @@ WhatsApp
 
 </div>
 
+</div>
+
+</div>
+
+<!-- CARTA -->
+
+<section id="carta">
+
+<div class="section-box">
+
+<h2>Carta</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Cervezas</h3>
+<p>Caña</p>
+<p>Doble</p>
+<p>Estrella Galicia</p>
+</div>
+
+<div class="card">
+<h3>Copas</h3>
+<p>Ron</p>
+<p>Ginebra</p>
+<p>Whisky</p>
+</div>
+
+<div class="card">
+<h3>Refrescos</h3>
+<p>Coca Cola</p>
+<p>Fanta</p>
+<p>Aquarius</p>
+</div>
+
+<div class="card">
+<h3>Chupitos</h3>
+<p>Jäger</p>
+<p>Tequila</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- EVENTOS -->
+
+<section id="eventos">
+
+<div class="section-box">
+
+<h2>Eventos</h2>
+
+<div class="event-video">
+
+<video controls>
+
+<source src="evento1.mp4" type="video/mp4">
+
+</video>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- IMAGENES -->
+
+<section id="imagenes">
+
+<div class="section-box">
+
+<h2>Imágenes</h2>
+
+<div class="grid">
+
+<img src="https://via.placeholder.com/300">
+<img src="https://via.placeholder.com/300">
+<img src="https://via.placeholder.com/300">
+<img src="https://via.placeholder.com/300">
+
+</div>
+
+</div>
+
+</section>
+
+<!-- TIENDA -->
+
+<section id="tienda">
+
+<div class="section-box">
+
+<h2>Tienda</h2>
+
+<p>Próximamente merchandising oficial de 20DC.</p>
+
+</div>
+
 </section>
 
 <footer>
 
-<p>20DC - Cañas · Copas · Conciertos</p>
+<p>20DC © Cañas · Copas · Conciertos</p>
 
 </footer>
 
-<script src="script.js"></script>
-
 </body>
-
 </html>
